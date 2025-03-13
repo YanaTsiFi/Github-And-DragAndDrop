@@ -17,9 +17,8 @@ public class DragAndDropTest {
         Configuration.timeout = 5000; // default 4000
     }
 
-
     @Test
-    void DragAndDropActions() {
+    void dragAndDropActionsTest() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         SelenideElement source = $("#column-a");
         SelenideElement target = $("#column-b");
@@ -31,8 +30,9 @@ public class DragAndDropTest {
         $("#column-a").shouldHave(text("B"));
         $("#column-b").shouldHave(text("A"));
     }
+
     @Test
-    void DragAndDropMethod() {
+    void dragAndDropMethodTest() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         SelenideElement source = $("#column-a");
         SelenideElement target = $("#column-b");

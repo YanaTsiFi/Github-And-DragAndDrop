@@ -9,7 +9,6 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-
 public class GitHubTest {
 
     @BeforeAll
@@ -20,7 +19,7 @@ public class GitHubTest {
     }
 
     @Test
-    void SolutionsTest() {
+    void solutionsTest() {
         open("https://github.com/");
         $("div.HeaderMenu").$(byText("Solutions")).hover();
         $$("ul.list-style-none a")
